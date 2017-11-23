@@ -1,6 +1,6 @@
 Analysis & Synthesis report for JogoConversor
-Tue Nov 14 00:44:41 2017
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Thu Nov 23 15:47:52 2017
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
 ---------------------
@@ -13,20 +13,20 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |HexToBinGame|Control:CONTROLLER|actualS
- 10. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state
- 11. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state
- 12. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn1state
- 13. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn0state
- 14. User-Specified and Inferred Latches
- 15. Registers Removed During Synthesis
- 16. Removed Registers Triggering Further Register Optimizations
- 17. General Register Statistics
- 18. Inverted Register Statistics
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Port Connectivity Checks: "Datapath:DATAPATHI|decod7seg:DISPLAY3D"
- 21. Port Connectivity Checks: "Control:CONTROLLER|ButtonSync:BTNSYNC"
+  8. State Machine - |HexToBinGame|Control:CONTROLLER|actualS
+  9. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state
+ 10. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state
+ 11. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn1state
+ 12. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn0state
+ 13. User-Specified and Inferred Latches
+ 14. Registers Removed During Synthesis
+ 15. Removed Registers Triggering Further Register Optimizations
+ 16. General Register Statistics
+ 17. Inverted Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Port Connectivity Checks: "Datapath:DATAPATHI|decod7seg:DISPLAY3D"
+ 20. Port Connectivity Checks: "Control:CONTROLLER|ButtonSync:BTNSYNC"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
  22. Elapsed Time Per Partition
  23. Analysis & Synthesis Messages
 
@@ -35,45 +35,44 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+-------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Tue Nov 14 00:44:41 2017      ;
-; Quartus II 64-Bit Version           ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
-; Revision Name                       ; JogoConversor                              ;
-; Top-level Entity Name               ; HexToBinGame                               ;
-; Family                              ; Cyclone V                                  ;
-; Logic utilization (in ALMs)         ; N/A                                        ;
-; Total registers                     ; 152                                        ;
-; Total pins                          ; 67                                         ;
-; Total virtual pins                  ; 0                                          ;
-; Total block memory bits             ; 0                                          ;
-; Total DSP Blocks                    ; 1                                          ;
-; Total HSSI RX PCSs                  ; 0                                          ;
-; Total HSSI PMA RX Deserializers     ; 0                                          ;
-; Total HSSI PMA RX ATT Deserializers ; 0                                          ;
-; Total HSSI TX PCSs                  ; 0                                          ;
-; Total HSSI PMA TX Serializers       ; 0                                          ;
-; Total HSSI PMA TX ATT Serializers   ; 0                                          ;
-; Total PLLs                          ; 0                                          ;
-; Total DLLs                          ; 0                                          ;
-+-------------------------------------+--------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Nov 23 15:47:52 2017      ;
+; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                   ; JogoConversor                              ;
+; Top-level Entity Name           ; HexToBinGame                               ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 151                                        ;
+; Total pins                      ; 67                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -83,7 +82,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
 ; Top-level entity name                                                           ; HexToBinGame       ; JogoConversor      ;
-; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -142,7 +141,7 @@ applicable agreement for further details.
 ; Report Connectivity Checks                                                      ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                               ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
@@ -159,7 +158,8 @@ applicable agreement for further details.
 ; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
 ; Synthesis Seed                                                                  ; 1                  ; 1                  ;
-; Automatic Parallel Synthesis                                                    ; Off                ; Off                ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
@@ -174,22 +174,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; decod7seg.vhd                    ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/decod7seg.vhd    ;         ;
-; ROM3.vhd                         ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ROM3.vhd         ;         ;
-; ROM2.vhd                         ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ROM2.vhd         ;         ;
-; ROM0.vhd                         ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ROM0.vhd         ;         ;
-; ButtonSync.vhd                   ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ButtonSync.vhd   ;         ;
-; ROM1.vhd                         ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ROM1.vhd         ;         ;
-; ClockChanger.vhd                 ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ClockChanger.vhd ;         ;
-; Datapath.vhd                     ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/Datapath.vhd     ;         ;
-; Control.vhd                      ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/Control.vhd      ;         ;
-; HexToBinGame.vhd                 ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/HexToBinGame.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; decod7seg.vhd                    ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/decod7seg.vhd    ;         ;
+; ROM3.vhd                         ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/ROM3.vhd         ;         ;
+; ROM2.vhd                         ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/ROM2.vhd         ;         ;
+; ROM0.vhd                         ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/ROM0.vhd         ;         ;
+; ButtonSync.vhd                   ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/ButtonSync.vhd   ;         ;
+; ROM1.vhd                         ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/ROM1.vhd         ;         ;
+; ClockChanger.vhd                 ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/ClockChanger.vhd ;         ;
+; Datapath.vhd                     ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/Datapath.vhd     ;         ;
+; Control.vhd                      ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/Control.vhd      ;         ;
+; HexToBinGame.vhd                 ; yes             ; User VHDL File  ; /home/alunos/Projeto/JogoConversorHexadecimal/HexToBinGame.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -197,23 +197,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 133            ;
+; Estimate of Logic utilization (ALMs needed) ; 137            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 226            ;
+; Combinational ALUT usage for logic          ; 233            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 37             ;
-;     -- 5 input functions                    ; 28             ;
-;     -- 4 input functions                    ; 13             ;
-;     -- <=3 input functions                  ; 148            ;
+;     -- 6 input functions                    ; 39             ;
+;     -- 5 input functions                    ; 34             ;
+;     -- 4 input functions                    ; 15             ;
+;     -- <=3 input functions                  ; 145            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 152            ;
+; Dedicated logic registers                   ; 151            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 67             ;
-; Total DSP Blocks                            ; 1              ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 125            ;
-; Total fan-out                               ; 1411           ;
-; Average fan-out                             ; 2.75           ;
+; Maximum fan-out                             ; 130            ;
+; Total fan-out                               ; 1449           ;
+; Average fan-out                             ; 2.80           ;
 +---------------------------------------------+----------------+
 
 
@@ -222,29 +224,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
 +----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------+--------------+
-; |HexToBinGame                    ; 226 (0)           ; 152 (0)      ; 0                 ; 1          ; 67   ; 0            ; |HexToBinGame                                             ;              ;
-;    |Control:CONTROLLER|          ; 9 (5)             ; 9 (5)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Control:CONTROLLER                          ;              ;
-;       |ButtonSync:BTNSYNC|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC       ;              ;
-;    |Datapath:DATAPATHI|          ; 217 (45)          ; 143 (27)     ; 0                 ; 1          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI                          ;              ;
-;       |ClockChanger:changeClock| ; 144 (144)         ; 116 (116)    ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|ClockChanger:changeClock ;              ;
-;       |decod7seg:DISPLAY0D|      ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY0D      ;              ;
-;       |decod7seg:DISPLAY1D|      ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY1D      ;              ;
-;       |decod7seg:DISPLAY2D|      ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY2D      ;              ;
-;       |decod7seg:DISPLAY3D|      ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY3D      ;              ;
+; |HexToBinGame                    ; 233 (1)           ; 151 (0)      ; 0                 ; 0          ; 67   ; 0            ; |HexToBinGame                                             ; work         ;
+;    |Control:CONTROLLER|          ; 9 (5)             ; 9 (5)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Control:CONTROLLER                          ; work         ;
+;       |ButtonSync:BTNSYNC|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC       ; work         ;
+;    |Datapath:DATAPATHI|          ; 223 (54)          ; 142 (21)     ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI                          ; work         ;
+;       |ClockChanger:changeClock| ; 141 (141)         ; 121 (121)    ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|ClockChanger:changeClock ; work         ;
+;       |decod7seg:DISPLAY0D|      ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY0D      ; work         ;
+;       |decod7seg:DISPLAY1D|      ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY1D      ; work         ;
+;       |decod7seg:DISPLAY2D|      ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY2D      ; work         ;
+;       |decod7seg:DISPLAY3D|      ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY3D      ; work         ;
 +----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary                                ;
-+---------------------+-------------+---------------------+-------------------+
-; Statistic           ; Number Used ; Available per Block ; Maximum Available ;
-+---------------------+-------------+---------------------+-------------------+
-; Independent 9x9     ; 1           ; 3.00                ; --                ;
-; DSP Block           ; 1           ; --                  ; --                ;
-; DSP 27-bit Element  ; 1           ; 1.00                ; --                ;
-; Unsigned Multiplier ; 1           ; --                  ; --                ;
-+---------------------+-------------+---------------------+-------------------+
 
 
 Encoding Type:  One-Hot
@@ -315,10 +305,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+-------------------------------+------------------------+
 ; Datapath:DATAPATHI|gameROM[1]                      ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
 ; Datapath:DATAPATHI|gameROM[0]                      ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
-; Datapath:DATAPATHI|gameLevel[0]                    ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
 ; Datapath:DATAPATHI|gameLevel[1]                    ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
-; Datapath:DATAPATHI|resetGC                         ; GND                           ; yes                    ;
-; Number of user-specified and inferred latches = 5  ;                               ;                        ;
+; Datapath:DATAPATHI|gameLevel[0]                    ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
+; Datapath:DATAPATHI|hexpoints[5]                    ; VCC                           ; yes                    ;
+; Datapath:DATAPATHI|hexpoints[6]                    ; Datapath:DATAPATHI|Equal13    ; yes                    ;
+; Datapath:DATAPATHI|hexpoints[4]                    ; VCC                           ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                               ;                        ;
 +----------------------------------------------------+-------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -355,12 +347,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 152   ;
+; Total registers                              ; 151   ;
 ; Number of registers using Synchronous Clear  ; 116   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 137   ;
+; Number of registers using Asynchronous Clear ; 142   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -370,7 +362,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; Control:CONTROLLER|resetSig            ; 12      ;
+; Control:CONTROLLER|resetSig            ; 7       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -380,8 +372,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |HexToBinGame|Datapath:DATAPATHI|pointsMult[3] ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |HexToBinGame|Datapath:DATAPATHI|currentHex[1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |HexToBinGame|Datapath:DATAPATHI|display4[4]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |HexToBinGame|Datapath:DATAPATHI|currentHex[5] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |HexToBinGame|Datapath:DATAPATHI|display3[6]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
@@ -404,12 +397,41 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 151                         ;
+;     CLR               ; 14                          ;
+;     CLR SCLR          ; 116                         ;
+;     ENA               ; 5                           ;
+;     ENA CLR           ; 12                          ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 241                         ;
+;     arith             ; 116                         ;
+;         1 data inputs ; 116                         ;
+;     normal            ; 125                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 15                          ;
+;         5 data inputs ; 34                          ;
+;         6 data inputs ; 39                          ;
+; boundary_port         ; 67                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.63                        ;
++-----------------------+-----------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -418,8 +440,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Tue Nov 14 00:44:38 2017
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Thu Nov 23 15:47:35 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JogoConversor -c JogoConversor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file decod7seg.vhd
@@ -456,58 +478,63 @@ Info (12127): Elaborating entity "HexToBinGame" for the top level hierarchy
 Info (12128): Elaborating entity "Control" for hierarchy "Control:CONTROLLER"
 Info (12128): Elaborating entity "ButtonSync" for hierarchy "Control:CONTROLLER|ButtonSync:BTNSYNC"
 Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:DATAPATHI"
-Warning (10492): VHDL Process Statement warning at Datapath.vhd(111): signal "playingSig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Datapath.vhd(111): signal "showingResult" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at Datapath.vhd(96): inferring latch(es) for signal or variable "resetGC", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Datapath.vhd(96): inferring latch(es) for signal or variable "gameLevel", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Datapath.vhd(96): inferring latch(es) for signal or variable "gameROM", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "currentHex[0]" at Datapath.vhd(170)
-Info (10041): Inferred latch for "currentHex[1]" at Datapath.vhd(170)
-Info (10041): Inferred latch for "currentHex[2]" at Datapath.vhd(170)
-Info (10041): Inferred latch for "currentHex[3]" at Datapath.vhd(170)
-Info (10041): Inferred latch for "currentHex[4]" at Datapath.vhd(170)
-Info (10041): Inferred latch for "currentHex[5]" at Datapath.vhd(170)
-Info (10041): Inferred latch for "currentHex[6]" at Datapath.vhd(170)
-Info (10041): Inferred latch for "currentHex[7]" at Datapath.vhd(170)
-Info (10041): Inferred latch for "pointsMult[0]" at Datapath.vhd(140)
-Info (10041): Inferred latch for "pointsMult[1]" at Datapath.vhd(140)
-Info (10041): Inferred latch for "pointsMult[2]" at Datapath.vhd(140)
-Info (10041): Inferred latch for "pointsMult[3]" at Datapath.vhd(140)
-Info (10041): Inferred latch for "gameROM[0]" at Datapath.vhd(96)
-Info (10041): Inferred latch for "gameROM[1]" at Datapath.vhd(96)
-Info (10041): Inferred latch for "gameLevel[0]" at Datapath.vhd(96)
-Info (10041): Inferred latch for "gameLevel[1]" at Datapath.vhd(96)
-Info (10041): Inferred latch for "resetGC" at Datapath.vhd(96)
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(112): signal "playingSig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(112): signal "showingResult" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(95): inferring latch(es) for signal or variable "gameLevel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(95): inferring latch(es) for signal or variable "gameROM", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "hexpoints[0]" at Datapath.vhd(177)
+Info (10041): Inferred latch for "hexpoints[1]" at Datapath.vhd(177)
+Info (10041): Inferred latch for "hexpoints[2]" at Datapath.vhd(177)
+Info (10041): Inferred latch for "hexpoints[3]" at Datapath.vhd(177)
+Info (10041): Inferred latch for "hexpoints[4]" at Datapath.vhd(177)
+Info (10041): Inferred latch for "hexpoints[5]" at Datapath.vhd(177)
+Info (10041): Inferred latch for "hexpoints[6]" at Datapath.vhd(177)
+Info (10041): Inferred latch for "hexpoints[7]" at Datapath.vhd(177)
+Info (10041): Inferred latch for "currentHex[0]" at Datapath.vhd(171)
+Info (10041): Inferred latch for "currentHex[1]" at Datapath.vhd(171)
+Info (10041): Inferred latch for "currentHex[2]" at Datapath.vhd(171)
+Info (10041): Inferred latch for "currentHex[3]" at Datapath.vhd(171)
+Info (10041): Inferred latch for "currentHex[4]" at Datapath.vhd(171)
+Info (10041): Inferred latch for "currentHex[5]" at Datapath.vhd(171)
+Info (10041): Inferred latch for "currentHex[6]" at Datapath.vhd(171)
+Info (10041): Inferred latch for "currentHex[7]" at Datapath.vhd(171)
+Info (10041): Inferred latch for "pointsMult[0]" at Datapath.vhd(141)
+Info (10041): Inferred latch for "pointsMult[1]" at Datapath.vhd(141)
+Info (10041): Inferred latch for "gameROM[0]" at Datapath.vhd(95)
+Info (10041): Inferred latch for "gameROM[1]" at Datapath.vhd(95)
+Info (10041): Inferred latch for "gameLevel[0]" at Datapath.vhd(95)
+Info (10041): Inferred latch for "gameLevel[1]" at Datapath.vhd(95)
 Info (12128): Elaborating entity "decod7seg" for hierarchy "Datapath:DATAPATHI|decod7seg:DISPLAY0D"
 Info (12128): Elaborating entity "ClockChanger" for hierarchy "Datapath:DATAPATHI|ClockChanger:changeClock"
-Info (10041): Inferred latch for "clk_out" at ClockChanger.vhd(59)
 Info (12128): Elaborating entity "ROM0" for hierarchy "Datapath:DATAPATHI|ROM0:iROM0"
 Info (12128): Elaborating entity "ROM1" for hierarchy "Datapath:DATAPATHI|ROM1:iROM1"
 Info (12128): Elaborating entity "ROM2" for hierarchy "Datapath:DATAPATHI|ROM2:iROM2"
 Info (12128): Elaborating entity "ROM3" for hierarchy "Datapath:DATAPATHI|ROM3:iROM3"
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|hexpoints[3]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[1]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[2]" is permanently enabled
 Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[3]" is permanently enabled
 Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[4]" is permanently enabled
 Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[5]" is permanently enabled
 Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[6]" is permanently enabled
 Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[7]" is permanently enabled
-Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[1]" is permanently enabled
-Warning (14026): LATCH primitive "Datapath:DATAPATHI|ClockChanger:changeClock|clk_out" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|hexpoints[2]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|hexpoints[1]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|hexpoints[0]" is permanently enabled
 Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[0]" is permanently enabled
-Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[2]" is permanently enabled
-Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer Datapath:DATAPATHI|ClockChanger:changeClock|clk_out~synth
-    Warning (19017): Found clock multiplexer Datapath:DATAPATHI|ClockChanger:changeClock|clk_out~synth
-    Warning (19017): Found clock multiplexer Datapath:DATAPATHI|ClockChanger:changeClock|clk_out~synth
+Warning (13012): Latch Datapath:DATAPATHI|hexpoints[6] has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Datapath:DATAPATHI|gameLevel[0]
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "Datapath:DATAPATHI|playingSig" is converted into an equivalent circuit using register "Datapath:DATAPATHI|playingSig~_emulated" and latch "Datapath:DATAPATHI|playingSig~1"
+    Warning (13310): Register "Datapath:DATAPATHI|resetGC" is converted into an equivalent circuit using register "Datapath:DATAPATHI|resetGC~_emulated" and latch "Datapath:DATAPATHI|resetGC~1"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC
     Warning (13410): Pin "HEX5[1]" is stuck at VCC
     Warning (13410): Pin "HEX5[2]" is stuck at VCC
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register Control:CONTROLLER|resetSig will power up to High
-Info (286030): Timing-Driven Synthesis is running
 Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top was ignored
@@ -533,20 +560,20 @@ Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not ex
     Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity ghrd_top -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity ghrd_top -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity ghrd_top -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[3]"
     Warning (15610): No output dependent on input pin "KEY[2]"
-Info (21057): Implemented 312 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 315 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 244 logic cells
-    Info (21062): Implemented 1 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 684 megabytes
-    Info: Processing ended: Tue Nov 14 00:44:41 2017
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (21061): Implemented 248 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 1070 megabytes
+    Info: Processing ended: Thu Nov 23 15:47:52 2017
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:36
 
 

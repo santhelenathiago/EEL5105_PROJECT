@@ -98,6 +98,6 @@ begin
 	reset      <= resetSig;
 	
 	--Display L ----------------------------------------------------------------
-	display5 <= "0001110" when playSig = '1' or stpSig = '1' else "1111111";
+	display5 <= "1000111" when playSig = '1' or stpSig = '1' else "1111111";
 	
 end controller;

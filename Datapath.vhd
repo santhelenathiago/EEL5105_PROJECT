@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
-use ieee.numeric_std.to_unsigned;
+use ieee.numeric_std.shift_left;
 
 entity Datapath is
 	port(leds		 : out std_logic_vector(9 downto  0);
@@ -28,9 +28,8 @@ architecture dtpth of Datapath is
 	signal playingSig		: std_logic := '0';
 	signal showingResult : std_logic := '0';
 	
-	signal pointsTot		: integer range 0 to 80 := 0;
-	signal pointsSum		: integer range 0 to 10  := 0;
-	signal pointsMult		: integer range 0 to 8   := 0;
+	signal pointsMult    : integer range 0  to 3;
+	signal pointsSum		: std_logic_vector(3 downto 0);
 	signal hexpoints 		: std_logic_vector(7 downto 0);
 	
 	--ROM things --------------------------------------------------------------
@@ -100,13 +99,15 @@ begin
 			ledsSig 			<= "0000000000";
 			showingResult 	<= '0';
 			resetGC			<= '1';
+			pointsSum      <= "0000";
 		--Setup process -------------------------------------------------------
 		elsif(stp = '1') then
-			gameLevel <= sws(9 downto 8);
-			gameROM   <= sws(1 downto 0);
-			ledsSig <= "0000000000"; 
-			resetGC <= '1';
-			showingResult <= '0';
+			gameLevel 		<= sws(9 downto 8);
+			gameROM   		<= sws(1 downto 0);
+			ledsSig 			<= "0000000000"; 
+			resetGC 			<= '1';
+			showingResult  <= '0';
+			pointsSum      <= "0000";
 			
 		elsif(play = '1' and playingSig = '0' and showingResult = '0') then
 			--Game State -------------------------------------------------------
@@ -125,8 +126,8 @@ begin
 			ROMin <= ROMin + "0001";
 	      if (ROMin = "1001") then
 					playingSig <= '0';
-					pointsTot <= pointsSum * pointsMult;
 					showingResult <= '1';
+					resetGC <= '1';
 		   end if;			
 		end if;
 	end process;
@@ -137,10 +138,10 @@ begin
 	leds 		<= ledsSig;
 	
 	--Points calculating ------------------------------------------------------
-	pointsMult <= 1  when gameLevel = "00" else
-					  2  when gameLevel = "01" else
-					  4  when gameLevel = "10" else
-					  8  when gameLevel = "11";
+	pointsMult <= 0  when gameLevel = "00" else
+					  1  when gameLevel = "01" else
+					  2  when gameLevel = "10" else
+					  3  when gameLevel = "11";
 					  
 	--Display current level ---------------------------------------------------
 	display4 <= "1000000" when gameLevel  = "00" and (stp = '1' or playingSig = '1') else
@@ -172,7 +173,11 @@ begin
 					  ROM2out when gameROM = "10" else
 					  ROM3out when gameROM = "11";
 					  
-	hexpoints <= std_logic_vector(to_unsigned(pointsTot, 8));
+					  
+	hexpoints <= "0000" & pointsSum       when pointsMult = 0 else 
+					 "000" & pointsSum & "0"  when pointsMult = 1 else
+					 "00" & pointsSum & "00"  when pointsMult = 2 else
+					 "0" & pointsSum & "000"  when pointsMult = 3;		  
 	
 	--ClockChanger Application ------------------------------------------------
 	changeClock : ClockChanger port map(gameLevel, clock, resetGC, gameClock);
