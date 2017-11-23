@@ -1,0 +1,552 @@
+Analysis & Synthesis report for JogoConversor
+Tue Nov 14 00:44:41 2017
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |HexToBinGame|Control:CONTROLLER|actualS
+ 10. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state
+ 11. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state
+ 12. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn1state
+ 13. State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn0state
+ 14. User-Specified and Inferred Latches
+ 15. Registers Removed During Synthesis
+ 16. Removed Registers Triggering Further Register Optimizations
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Port Connectivity Checks: "Datapath:DATAPATHI|decod7seg:DISPLAY3D"
+ 21. Port Connectivity Checks: "Control:CONTROLLER|ButtonSync:BTNSYNC"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++-------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status         ; Successful - Tue Nov 14 00:44:41 2017      ;
+; Quartus II 64-Bit Version           ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                       ; JogoConversor                              ;
+; Top-level Entity Name               ; HexToBinGame                               ;
+; Family                              ; Cyclone V                                  ;
+; Logic utilization (in ALMs)         ; N/A                                        ;
+; Total registers                     ; 152                                        ;
+; Total pins                          ; 67                                         ;
+; Total virtual pins                  ; 0                                          ;
+; Total block memory bits             ; 0                                          ;
+; Total DSP Blocks                    ; 1                                          ;
+; Total HSSI RX PCSs                  ; 0                                          ;
+; Total HSSI PMA RX Deserializers     ; 0                                          ;
+; Total HSSI PMA RX ATT Deserializers ; 0                                          ;
+; Total HSSI TX PCSs                  ; 0                                          ;
+; Total HSSI PMA TX Serializers       ; 0                                          ;
+; Total HSSI PMA TX ATT Serializers   ; 0                                          ;
+; Total PLLs                          ; 0                                          ;
+; Total DLLs                          ; 0                                          ;
++-------------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; HexToBinGame       ; JogoConversor      ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; decod7seg.vhd                    ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/decod7seg.vhd    ;         ;
+; ROM3.vhd                         ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ROM3.vhd         ;         ;
+; ROM2.vhd                         ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ROM2.vhd         ;         ;
+; ROM0.vhd                         ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ROM0.vhd         ;         ;
+; ButtonSync.vhd                   ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ButtonSync.vhd   ;         ;
+; ROM1.vhd                         ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ROM1.vhd         ;         ;
+; ClockChanger.vhd                 ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/ClockChanger.vhd ;         ;
+; Datapath.vhd                     ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/Datapath.vhd     ;         ;
+; Control.vhd                      ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/Control.vhd      ;         ;
+; HexToBinGame.vhd                 ; yes             ; User VHDL File  ; /home/takkato/Quartus/JogoConversorHexadecimal/HexToBinGame.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 133            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 226            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 37             ;
+;     -- 5 input functions                    ; 28             ;
+;     -- 4 input functions                    ; 13             ;
+;     -- <=3 input functions                  ; 148            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 152            ;
+;                                             ;                ;
+; I/O pins                                    ; 67             ;
+; Total DSP Blocks                            ; 1              ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 125            ;
+; Total fan-out                               ; 1411           ;
+; Average fan-out                             ; 2.75           ;
++---------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
++----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
++----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------+--------------+
+; |HexToBinGame                    ; 226 (0)           ; 152 (0)      ; 0                 ; 1          ; 67   ; 0            ; |HexToBinGame                                             ;              ;
+;    |Control:CONTROLLER|          ; 9 (5)             ; 9 (5)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Control:CONTROLLER                          ;              ;
+;       |ButtonSync:BTNSYNC|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC       ;              ;
+;    |Datapath:DATAPATHI|          ; 217 (45)          ; 143 (27)     ; 0                 ; 1          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI                          ;              ;
+;       |ClockChanger:changeClock| ; 144 (144)         ; 116 (116)    ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|ClockChanger:changeClock ;              ;
+;       |decod7seg:DISPLAY0D|      ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY0D      ;              ;
+;       |decod7seg:DISPLAY1D|      ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY1D      ;              ;
+;       |decod7seg:DISPLAY2D|      ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY2D      ;              ;
+;       |decod7seg:DISPLAY3D|      ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |HexToBinGame|Datapath:DATAPATHI|decod7seg:DISPLAY3D      ;              ;
++----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary                                ;
++---------------------+-------------+---------------------+-------------------+
+; Statistic           ; Number Used ; Available per Block ; Maximum Available ;
++---------------------+-------------+---------------------+-------------------+
+; Independent 9x9     ; 1           ; 3.00                ; --                ;
+; DSP Block           ; 1           ; --                  ; --                ;
+; DSP 27-bit Element  ; 1           ; 1.00                ; --                ;
+; Unsigned Multiplier ; 1           ; --                  ; --                ;
++---------------------+-------------+---------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |HexToBinGame|Control:CONTROLLER|actualS                      ;
++----------------+----------------+--------------+---------------+--------------+
+; Name           ; actualS.Result ; actualS.Game ; actualS.Setup ; actualS.Init ;
++----------------+----------------+--------------+---------------+--------------+
+; actualS.Init   ; 0              ; 0            ; 0             ; 0            ;
+; actualS.Setup  ; 0              ; 0            ; 1             ; 1            ;
+; actualS.Game   ; 0              ; 1            ; 0             ; 1            ;
+; actualS.Result ; 1              ; 0            ; 0             ; 1            ;
++----------------+----------------+--------------+---------------+--------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state                     ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn3state.EsperaSoltar ; btn3state.SaidaAtiva ; btn3state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn3state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn3state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn3state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state                     ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn2state.EsperaSoltar ; btn2state.SaidaAtiva ; btn2state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn2state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn2state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn2state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn1state                     ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn1state.EsperaSoltar ; btn1state.SaidaAtiva ; btn1state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn1state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn1state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn1state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |HexToBinGame|Control:CONTROLLER|ButtonSync:BTNSYNC|btn0state                     ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn0state.EsperaSoltar ; btn0state.SaidaAtiva ; btn0state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn0state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn0state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn0state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal           ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------------+------------------------+
+; Datapath:DATAPATHI|gameROM[1]                      ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
+; Datapath:DATAPATHI|gameROM[0]                      ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
+; Datapath:DATAPATHI|gameLevel[0]                    ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
+; Datapath:DATAPATHI|gameLevel[1]                    ; Datapath:DATAPATHI|gameROM[0] ; yes                    ;
+; Datapath:DATAPATHI|resetGC                         ; GND                           ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                               ;                        ;
++----------------------------------------------------+-------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++---------------------------------------------------------------+--------------------+
+; Register name                                                 ; Reason for Removal ;
++---------------------------------------------------------------+--------------------+
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state.SaidaAtiva    ; Lost fanout        ;
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state.EsperaSoltar  ; Lost fanout        ;
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state.EsperaApertar ; Lost fanout        ;
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state.SaidaAtiva    ; Lost fanout        ;
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state.EsperaSoltar  ; Lost fanout        ;
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state.EsperaApertar ; Lost fanout        ;
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn1state.EsperaSoltar  ; Lost fanout        ;
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn0state.EsperaSoltar  ; Lost fanout        ;
+; Total Number of Removed Registers = 8                         ;                    ;
++---------------------------------------------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                     ;
++------------------------------------------------------------+--------------------+---------------------------------------------------------------+
+; Register name                                              ; Reason for Removal ; Registers Removed due to This Register                        ;
++------------------------------------------------------------+--------------------+---------------------------------------------------------------+
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state.SaidaAtiva ; Lost Fanouts       ; Control:CONTROLLER|ButtonSync:BTNSYNC|btn3state.EsperaApertar ;
+; Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state.SaidaAtiva ; Lost Fanouts       ; Control:CONTROLLER|ButtonSync:BTNSYNC|btn2state.EsperaApertar ;
++------------------------------------------------------------+--------------------+---------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 152   ;
+; Number of registers using Synchronous Clear  ; 116   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 137   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Control:CONTROLLER|resetSig            ; 12      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |HexToBinGame|Datapath:DATAPATHI|pointsMult[3] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |HexToBinGame|Datapath:DATAPATHI|currentHex[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:DATAPATHI|decod7seg:DISPLAY3D" ;
++------------+-------+----------+------------------------------------+
+; Port       ; Type  ; Severity ; Details                            ;
++------------+-------+----------+------------------------------------+
+; entrada[3] ; Input ; Info     ; Stuck at GND                       ;
++------------+-------+----------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Control:CONTROLLER|ButtonSync:BTNSYNC"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; btn2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; btn3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Tue Nov 14 00:44:38 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JogoConversor -c JogoConversor
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file decod7seg.vhd
+    Info (12022): Found design unit 1: decod7seg-circuito
+    Info (12023): Found entity 1: decod7seg
+Info (12021): Found 2 design units, including 1 entities, in source file ROM3.vhd
+    Info (12022): Found design unit 1: ROM3-behavioral3
+    Info (12023): Found entity 1: ROM3
+Info (12021): Found 2 design units, including 1 entities, in source file ROM2.vhd
+    Info (12022): Found design unit 1: ROM2-behavioral2
+    Info (12023): Found entity 1: ROM2
+Info (12021): Found 2 design units, including 1 entities, in source file ROM0.vhd
+    Info (12022): Found design unit 1: ROM0-behavioral0
+    Info (12023): Found entity 1: ROM0
+Info (12021): Found 2 design units, including 1 entities, in source file ButtonSync.vhd
+    Info (12022): Found design unit 1: ButtonSync-ButtonSyncImpl
+    Info (12023): Found entity 1: ButtonSync
+Info (12021): Found 2 design units, including 1 entities, in source file ROM1.vhd
+    Info (12022): Found design unit 1: ROM1-behavioral1
+    Info (12023): Found entity 1: ROM1
+Info (12021): Found 2 design units, including 1 entities, in source file ClockChanger.vhd
+    Info (12022): Found design unit 1: ClockChanger-Behavioral
+    Info (12023): Found entity 1: ClockChanger
+Info (12021): Found 2 design units, including 1 entities, in source file Datapath.vhd
+    Info (12022): Found design unit 1: Datapath-dtpth
+    Info (12023): Found entity 1: Datapath
+Info (12021): Found 2 design units, including 1 entities, in source file Control.vhd
+    Info (12022): Found design unit 1: control-controller
+    Info (12023): Found entity 1: Control
+Info (12021): Found 2 design units, including 1 entities, in source file HexToBinGame.vhd
+    Info (12022): Found design unit 1: HexToBinGame-circuit
+    Info (12023): Found entity 1: HexToBinGame
+Info (12127): Elaborating entity "HexToBinGame" for the top level hierarchy
+Info (12128): Elaborating entity "Control" for hierarchy "Control:CONTROLLER"
+Info (12128): Elaborating entity "ButtonSync" for hierarchy "Control:CONTROLLER|ButtonSync:BTNSYNC"
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:DATAPATHI"
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(111): signal "playingSig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(111): signal "showingResult" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(96): inferring latch(es) for signal or variable "resetGC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(96): inferring latch(es) for signal or variable "gameLevel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(96): inferring latch(es) for signal or variable "gameROM", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "currentHex[0]" at Datapath.vhd(170)
+Info (10041): Inferred latch for "currentHex[1]" at Datapath.vhd(170)
+Info (10041): Inferred latch for "currentHex[2]" at Datapath.vhd(170)
+Info (10041): Inferred latch for "currentHex[3]" at Datapath.vhd(170)
+Info (10041): Inferred latch for "currentHex[4]" at Datapath.vhd(170)
+Info (10041): Inferred latch for "currentHex[5]" at Datapath.vhd(170)
+Info (10041): Inferred latch for "currentHex[6]" at Datapath.vhd(170)
+Info (10041): Inferred latch for "currentHex[7]" at Datapath.vhd(170)
+Info (10041): Inferred latch for "pointsMult[0]" at Datapath.vhd(140)
+Info (10041): Inferred latch for "pointsMult[1]" at Datapath.vhd(140)
+Info (10041): Inferred latch for "pointsMult[2]" at Datapath.vhd(140)
+Info (10041): Inferred latch for "pointsMult[3]" at Datapath.vhd(140)
+Info (10041): Inferred latch for "gameROM[0]" at Datapath.vhd(96)
+Info (10041): Inferred latch for "gameROM[1]" at Datapath.vhd(96)
+Info (10041): Inferred latch for "gameLevel[0]" at Datapath.vhd(96)
+Info (10041): Inferred latch for "gameLevel[1]" at Datapath.vhd(96)
+Info (10041): Inferred latch for "resetGC" at Datapath.vhd(96)
+Info (12128): Elaborating entity "decod7seg" for hierarchy "Datapath:DATAPATHI|decod7seg:DISPLAY0D"
+Info (12128): Elaborating entity "ClockChanger" for hierarchy "Datapath:DATAPATHI|ClockChanger:changeClock"
+Info (10041): Inferred latch for "clk_out" at ClockChanger.vhd(59)
+Info (12128): Elaborating entity "ROM0" for hierarchy "Datapath:DATAPATHI|ROM0:iROM0"
+Info (12128): Elaborating entity "ROM1" for hierarchy "Datapath:DATAPATHI|ROM1:iROM1"
+Info (12128): Elaborating entity "ROM2" for hierarchy "Datapath:DATAPATHI|ROM2:iROM2"
+Info (12128): Elaborating entity "ROM3" for hierarchy "Datapath:DATAPATHI|ROM3:iROM3"
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[3]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[4]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[5]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[6]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[7]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[1]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|ClockChanger:changeClock|clk_out" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[0]" is permanently enabled
+Warning (14026): LATCH primitive "Datapath:DATAPATHI|currentHex[2]" is permanently enabled
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer Datapath:DATAPATHI|ClockChanger:changeClock|clk_out~synth
+    Warning (19017): Found clock multiplexer Datapath:DATAPATHI|ClockChanger:changeClock|clk_out~synth
+    Warning (19017): Found clock multiplexer Datapath:DATAPATHI|ClockChanger:changeClock|clk_out~synth
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "Datapath:DATAPATHI|playingSig" is converted into an equivalent circuit using register "Datapath:DATAPATHI|playingSig~_emulated" and latch "Datapath:DATAPATHI|playingSig~1"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register Control:CONTROLLER|resetSig will power up to High
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity ghrd_top -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+Info (21057): Implemented 312 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 244 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 684 megabytes
+    Info: Processing ended: Tue Nov 14 00:44:41 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

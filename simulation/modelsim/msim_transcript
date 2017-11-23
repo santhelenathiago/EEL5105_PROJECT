@@ -1,0 +1,510 @@
+# do JogoConversor_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/takkato/altera/13.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/takkato/altera/13.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/decod7seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decod7seg
+# -- Compiling architecture circuito of decod7seg
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/ROM3.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ROM3
+# -- Compiling architecture behavioral3 of ROM3
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/ROM2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ROM2
+# -- Compiling architecture behavioral2 of ROM2
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/ROM0.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ROM0
+# -- Compiling architecture behavioral0 of ROM0
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/ButtonSync.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ButtonSync
+# -- Compiling architecture ButtonSyncImpl of ButtonSync
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/ROM1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ROM1
+# -- Compiling architecture behavioral1 of ROM1
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/ClockChanger.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ClockChanger
+# -- Compiling architecture Behavioral of ClockChanger
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/Datapath.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Datapath
+# -- Compiling architecture dtpth of Datapath
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/Control.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Control
+# -- Compiling architecture controller of control
+# vcom -93 -work work {/home/takkato/Quartus/JogoConversorHexadecimal/HexToBinGame.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HexToBinGame
+# -- Compiling architecture circuit of HexToBinGame
+# 
+vsim work.hextobingame
+# vsim work.hextobingame 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.hextobingame(circuit)
+# Loading ieee.numeric_std(body)
+# Loading work.control(controller)
+# Loading work.buttonsync(buttonsyncimpl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.datapath(dtpth)
+# Loading work.decod7seg(circuito)
+# Loading work.clockchanger(behavioral)
+# Loading work.rom0(behavioral0)
+# Loading work.rom1(behavioral1)
+# Loading work.rom2(behavioral2)
+# Loading work.rom3(behavioral3)
+add wave -position insertpoint  \
+sim:/hextobingame/KEY \
+sim:/hextobingame/CLOCK_50 \
+sim:/hextobingame/SW \
+sim:/hextobingame/LEDR \
+sim:/hextobingame/HEX0 \
+sim:/hextobingame/HEX1 \
+sim:/hextobingame/HEX2 \
+sim:/hextobingame/HEX3 \
+sim:/hextobingame/HEX4 \
+sim:/hextobingame/HEX5 \
+sim:/hextobingame/playingSig \
+sim:/hextobingame/playSig \
+sim:/hextobingame/setupSig \
+sim:/hextobingame/resetSig
+force -freeze sim:/hextobingame/KEY 1111 0
+force -freeze sim:/hextobingame/CLOCK_50 1 0, 0 {50 ps} -r 100
+force -freeze sim:/hextobingame/SW 0000000000 0
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /hextobingame/DATAPATHI
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /hextobingame/DATAPATHI/changeClock
+run
+run
+run
+force -freeze sim:/hextobingame/KEY 1101 0
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 500 ps  Iteration: 2  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 500 ps  Iteration: 2  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 500 ps  Iteration: 2  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 500 ps  Iteration: 2  Instance: /hextobingame/DATAPATHI/changeClock
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 600 ps  Iteration: 2  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 600 ps  Iteration: 2  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 600 ps  Iteration: 2  Instance: /hextobingame/DATAPATHI/changeClock
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 600 ps  Iteration: 2  Instance: /hextobingame/DATAPATHI/changeClock
+force -freeze sim:/hextobingame/KEY 1111 0
+run
+run
+force -freeze sim:/hextobingame/SW 0100000011 0
+run
+force -freeze sim:/hextobingame/KEY 1101 0
+run
+run
+force -freeze sim:/hextobingame/KEY 1111 0
+run
+run
+run
+run
+run
+force -freeze sim:/hextobingame/SW 0011110011 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/hextobingame/SW 10001101 0
+# Value length (8) does not equal array index length (10).
+# 
+# ** Error: (vsim-4011) Invalid force value: 10001101 0.
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/hextobingame/SW 0011010110 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/hextobingame/SW 0011100101 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/hextobingame/KEY 1110 0
+run
+force -freeze sim:/hextobingame/KEY 1111 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/hextobingame/KEY 1101 0
+run
+run
+run
+force -freeze sim:/hextobingame/KEY 1111 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

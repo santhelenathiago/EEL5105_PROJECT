@@ -1,0 +1,181 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -3.984
+TNS   : -89.970
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.705
+TNS   : -278.091
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : -2.319
+TNS   : -60.962
+
+Type  : Slow 1100mV 85C Model Hold 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.143
+TNS   : -10.723
+
+Type  : Slow 1100mV 85C Model Recovery 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -3.815
+TNS   : -56.508
+
+Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : -0.271
+TNS   : -1.305
+
+Type  : Slow 1100mV 85C Model Removal 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.398
+TNS   : -14.666
+
+Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.879
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -2.225
+TNS   : -38.039
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -63.716
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Control:CONTROLLER|actualS.Setup'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -4.122
+TNS   : -90.223
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.661
+TNS   : -272.849
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -2.429
+TNS   : -65.048
+
+Type  : Slow 1100mV 0C Model Hold 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.086
+TNS   : -10.459
+
+Type  : Slow 1100mV 0C Model Recovery 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -3.905
+TNS   : -58.245
+
+Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.210
+TNS   : -0.982
+
+Type  : Slow 1100mV 0C Model Removal 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.315
+TNS   : -13.726
+
+Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.833
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -2.225
+TNS   : -37.206
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -67.980
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Control:CONTROLLER|actualS.Setup'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -2.060
+TNS   : -44.644
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -1.054
+TNS   : -105.330
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : -1.330
+TNS   : -33.039
+
+Type  : Fast 1100mV 85C Model Hold 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -0.656
+TNS   : -4.836
+
+Type  : Fast 1100mV 85C Model Recovery 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.939
+TNS   : -27.914
+
+Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -0.792
+TNS   : -7.936
+
+Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.492
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.702
+TNS   : -20.486
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.101
+TNS   : -12.042
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Control:CONTROLLER|actualS.Setup'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.950
+TNS   : -42.133
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -0.900
+TNS   : -88.090
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -1.329
+TNS   : -33.971
+
+Type  : Fast 1100mV 0C Model Hold 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -0.562
+TNS   : -4.497
+
+Type  : Fast 1100mV 0C Model Recovery 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.875
+TNS   : -27.307
+
+Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -0.707
+TNS   : -7.037
+
+Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Datapath:DATAPATHI|ClockChanger:changeClock|counter0[0]'
+Slack : -1.702
+TNS   : -20.425
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.100
+TNS   : -11.925
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Control:CONTROLLER|actualS.Setup'
+Slack : 0.399
+TNS   : 0.000
+
+------------------------------------------------------------
